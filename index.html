@@ -1,46 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge 1 Encriptador de texto</title>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
-<body class="cuerpo_contenido">
-    <header></header>
-
-    <main class="contenido_menu">
-        <section class="seccion_izquierda">
-            <div class="seccion_encabezado">
-                <img class="imagen_encabezado" src="./assets/Logo.png" alt="Logo Arula">
+<body>
+    <div class="contenedor">
+        <img src="assets/Logo.png" class="logo" id="logo">
+        <div class="encriptar">
+            <textarea name="texto" class="texto" id="texto" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+        </div>
+        <div class="terminos">
+            <p>Sólo letras minúsculas y sin acentos</p>
+        </div>
+        <div class="botones">
+            <button class="btn-encriptar" type="button" onclick="encriptar()">Encriptar</button>
+            <input class="btn-desencriptar" type="button" value="Desencriptar" onclick="desencriptar()"></input>
+        </div>
+        <div class="encriptado">
+            <img src="assets/Muñeco.svg" alt="" id="muñeco">
+            <div class="mensaje-encriptado" id="mensaje-encriptado">
+                <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+                <p id="parrafo">Ingrese el texto que desea encriptar o desencriptar</p>
+                <!--<textarea name="mensaje" id="mensaje" class="mensaje" cols="30" rows="10"></textarea>-->
             </div>
-
-            <div class="seccion_entrada">
-                <h1 class="titulo_entrada">Encriptador de texto</h1>
-                <textarea class="texto_entrada" name="texto_usuario" id="textoUsuario" placeholder="Ingrese el texto aquí"></textarea>
-                <div class="seccion_pie_pagina">
-                    
-                    <p class="texto_pie_pagina">Sólo letras minúculas y sin acentos</p>
-                </div>
-
-                <div class="boton_contenido">
-                    <button class="boton_encriptado" onclick="TextoEncriptado();">Encriptar</button>
-                    <button  class="boton_desencriptado" onclick="TextoDesencriptado();">Desencriptar</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="seccion_derecha">
-            <img class="imagen_derecha" src="./assets/Muñeco.svg" alt="Individuo observando diamante a través de una lupa">
-            <div class="texto_derecho">
-                <p class="texto_derecha1">Ningún mensaje fue encontrado</p>
-                <p class="texto_derecha2">Ingrese el texto que desea encriptar o desencriptar</p>
-                <p class="texto_derecha3" id="salidaTexto"></p>
-                <button class="boton_copia" id="botonCopia" onclick="copiaTexto();">Copiar</button>
-            </div>
-        </section>
-    </main>
-    
+        </div>
+    </div>
 </body>
-<script src="./app.js"></script>
+<script src="app.js"></script>
 </html>
