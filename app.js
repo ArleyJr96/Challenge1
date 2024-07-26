@@ -12,12 +12,12 @@ function encriptar(){
         .replace(/u/gi, "ufat");
 
     if(texto.length != 0){
-        document.getElementById("texto").value = textoCifrado;
-        tituloMensaje.textContent = "Texto encriptado con éxito";
-        parrafo.textContent = "";
-        muñeco.src = "./assets/Encriptado.jpg";
+        document.getElementById("muñeco").style.display = "none";
+        document.getElementById("texto").value = "";
+        tituloMensaje.textContent = "Su mensaje encriptado es: \n";
+        parrafo.textContent = textoCifrado;
     } else{
-        muñeco.src = "./assets/Muñeco.svg";
+        document.getElementById("muñeco").style.display = "";
         tituloMensaje.textContent = "Ningún mensaje fue encontrado"
         parrafo.textContent = "Ingrese el texto que desea encriptar o desencriptar";
         alert("Debe ingresar algún texto");
@@ -37,14 +37,23 @@ function desencriptar(){
         .replace(/ufat/gi, "u");
 
     if(texto.length != 0){
-        document.getElementById("texto").value = textoCifrado;
-        tituloMensaje.textContent = "Texto desencriptado con éxito";
-        parrafo.textContent = "";
-        muñeco.src = "./assets/Desencriptado.jpg";
+        document.getElementById("muñeco").style.display = "none";
+        document.getElementById("texto").value = "";
+        tituloMensaje.textContent = "Su mensaje desencriptado es: \n";
+        parrafo.textContent = textoCifrado;
     } else{
-        muñeco.src = "./assets/Muñeco.svg";
+        document.getElementById("muñeco").style.display = "";
         tituloMensaje.textContent = "Ningún mensaje fue encontrado"
         parrafo.textContent = "Ingrese el texto que desea encriptar o desencriptar";
         alert("Debe ingresar algún texto");
     }
+}
+
+function textoCopia() {
+    let textoSalid = document.getElementById("parrafo").innerText;
+    navigator.clipboard.writeText(textoSalid).then(function() {
+        alert("Texto copiado al portapapeles");
+    }, function() {
+        alert("Error al copiar el texto");
+    });
 }
