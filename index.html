@@ -19,14 +19,15 @@
             <button class="btn-encriptar" type="button" onclick="encriptar()">Encriptar</button>
             <input class="btn-desencriptar" type="button" value="Desencriptar" onclick="desencriptar()"></input>
         </div>
-        <div class="encriptado">
-            <img src="assets/Muñeco.svg" alt="" id="muñeco">
+        <section class="encriptado">
+            <img class= "muñeco" src="assets/Muñeco.svg" alt="" id="muñeco">
+
             <div class="mensaje-encriptado" id="mensaje-encriptado">
                 <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
                 <p id="parrafo">Ingrese el texto que desea encriptar o desencriptar</p>
-                <!--<textarea name="mensaje" id="mensaje" class="mensaje" cols="30" rows="10"></textarea>-->
+                <button class="boton-copia" id="botonCopia" onclick="textoCopia();">Copiar</button>
             </div>
-        </div>
+        </section>
     </div>
 </body>
 <script src="app.js"></script>
