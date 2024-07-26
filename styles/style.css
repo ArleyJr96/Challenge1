@@ -78,6 +78,13 @@
     flex-grow: 0;
 }
 
+.terminos img{
+    position: relative;
+    width: 20px;
+    height: 25%;
+    top: 10%;
+}
+
 .botones{
     display: flex;
     flex-direction: row;
